@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { RotatingLines } from "react-loader-spinner";
 
-const SignUp = () => {
+const SignUp = () => { 
   const [formsData, setFormsData] = useState({
     fullName: "",
     email: "",
@@ -11,6 +11,7 @@ const SignUp = () => {
   const [show, setShow] = useState(false);
 
   const handleInput = (event) => {
+    console.log(event.target);
     console.log(event.target);
   };
 
