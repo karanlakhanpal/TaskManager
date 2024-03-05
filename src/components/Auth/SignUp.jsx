@@ -33,7 +33,7 @@ const SignUp = () => {
           </div>
           <div>
             <input
-              className="w-full border border-gray-400 h-11 rounded-md px-2"
+              className="w-full border border-gray-300 h-11 rounded-md px-2"
               type="email"
               name="email"
               placeholder="Email"
@@ -42,7 +42,7 @@ const SignUp = () => {
           </div>
           <div>
             <input
-              className="w-full border border-gray-400 h-11 rounded-md px-2"
+              className="w-full border border-gray-300 h-11 rounded-md px-2"
               type="password"
               name="password"
               placeholder="Create Password"
@@ -51,7 +51,7 @@ const SignUp = () => {
           </div>
           <div>
             <input
-              className="w-full border border-gray-400 h-11 rounded-md px-2"
+              className="w-full border border-gray-300 h-11 rounded-md px-2"
               type="password"
               name="confirm password"
               placeholder="Confirm Password"
