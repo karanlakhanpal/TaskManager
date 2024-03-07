@@ -5,7 +5,7 @@ const Loader = ({ text, showText }) => {
   return (
     <div className="flex flex-row gap-2 justify-center items-center">
       <RotatingLines
-        visible={true}
+        visible={true} 
         height="25"
         width="25"
         strokeWidth="4"

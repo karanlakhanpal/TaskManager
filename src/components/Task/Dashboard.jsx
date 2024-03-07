@@ -1,11 +1,17 @@
 import React from "react";
+import image from "../../assets/Person.png";
 
 const Dashboard = () => {
   return (
-    <div className="p-4 h-screen bg-blue-500">
+    <div className="p-4 h-screen bg-[#2980B9]">
       {/* Welcome Message */}
-      <div className=" bg-white h-16 rounded-md mb-4 p-4">
-        <h1 className="text-2xl font-bold">Welcome, {"Karan Sharma"}!</h1>
+      <div className=" bg-white h-20 rounded-md mb-4 p-4 flex flex-row gap-x-3 justify-end">
+        <div className="flex  items-center">
+          <h1 className="text-xl font-bold">Welcome, {"Karan kumar"}</h1>
+        </div>
+        <div className="flex items-center border border-darkgray rounded-md">
+          <img src={image} alt="user logo" height={70} width={70} />
+        </div>
       </div>
 
       {/* Overview Section */}
@@ -39,6 +45,29 @@ const Dashboard = () => {
         >
           View Task List
         </a>
+      </div>
+      {/* Recent Tasks */}
+      <div className="mb-6">
+        <h2 className="text-2xl font-bold mb-4 text-gray-800">Recent Tasks</h2>
+        <ul>
+          <li className="flex items-center space-x-2">
+            <span className="text-gray-600">{/* <HiOutlineCalendar /> */}</span>
+            <span className="text-gray-600">Feb 15, 2024</span>
+            <span className="text-gray-800">Task 1</span>
+          </li>
+          <li className="flex items-center space-x-2">
+            <span className="text-gray-600">{/* <HiOutlineCalendar /> */}</span>
+            <span className="text-gray-600">Feb 14, 2024</span>
+            <span className="text-gray-800">Task 2</span>
+          </li>
+          {/* Add more recent tasks as needed */}
+        </ul>
+      </div>
+
+      {/* Mini Calendar */}
+      <div>
+        <h2 className="text-2xl font-bold mb-4 text-gray-800">Mini Calendar</h2>
+        {/* Mini calendar component or representation */}
       </div>
     </div>
   );
