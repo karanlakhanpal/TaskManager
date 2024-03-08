@@ -1,22 +1,32 @@
-import React from "react";
-import image from "../../assets/Person.png";
+import React, { useState } from "react";
+import image from "../../assets/karan.jpg";
+import Task from "../../Services/Task";
+import TaskForm from "./TaskForm";
 
 const Dashboard = () => {
+  const [show, setShow] = useState(false);
+  const [showForm, setShowForm] = useState(false);
   return (
-    <div className="p-4 h-screen bg-[#2980B9]">
+    <div className="p-4 min-h-screen bg-[#2980B9]">
       {/* Welcome Message */}
-      <div className=" bg-white h-20 rounded-md mb-4 p-4 flex flex-row gap-x-3 justify-end">
+      <div className=" bg-white h-20 rounded-md mb-4 p-5 flex flex-row gap-x-3 justify-end">
         <div className="flex  items-center">
           <h1 className="text-xl font-bold">Welcome, {"Karan kumar"}</h1>
         </div>
-        <div className="flex items-center border border-darkgray rounded-md">
-          <img src={image} alt="user logo" height={70} width={70} />
+        <div className="flex items-center">
+          <img
+            src={image}
+            alt="user logo"
+            height={60}
+            width={60}
+            className="rounded-full"
+          />
         </div>
       </div>
 
       {/* Overview Section */}
-      <div className="bg-white p-6 rounded-lg shadow-md mb-6">
-        <h2 className="text-xl font-bold mb-4">Task Overview</h2>
+      <div className="bg-white p-4 rounded-lg shadow-md mb-3">
+        <h2 className="text-xl font-bold mb-2">Task Overview</h2>
         {/* Example Statistics */}
         <div className="flex justify-between">
           <div>
@@ -36,39 +46,56 @@ const Dashboard = () => {
 
       {/* Quick Actions */}
       <div className="flex gap-4">
-        <button className="bg-white absolute bottom-5 right-5 text-black px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300">
-          Add New Task +
+        <button
+          onClick={() => {
+            setShowForm(!showForm);
+          }}
+          className="bg-white  rounded-xl text-black p-2 px-8 text-lg hover:bg-blue-600 hover:text-white border border-white focus:outline-none focus:ring focus:border-blue-300"
+        >
+          Add Task +
         </button>
-        <a
-          href="/task-list"
-          className="bg-gray-500 text-white px-4 py-2 rounded-md hover:bg-gray-600 focus:outline-none focus:ring focus:border-gray-300"
+        <button
+          onClick={() => setShow(!show)}
+          className="bg-white rounded-xl text-black p-2 px-8 text-lg hover:bg-blue-600 hover:text-white border border-white focus:outline-none focus:ring focus:border-blue-300"
         >
           View Task List
-        </a>
+        </button>
       </div>
-      {/* Recent Tasks */}
-      <div className="mb-6">
-        <h2 className="text-2xl font-bold mb-4 text-gray-800">Recent Tasks</h2>
-        <ul>
-          <li className="flex items-center space-x-2">
-            <span className="text-gray-600">{/* <HiOutlineCalendar /> */}</span>
-            <span className="text-gray-600">Feb 15, 2024</span>
-            <span className="text-gray-800">Task 1</span>
-          </li>
-          <li className="flex items-center space-x-2">
-            <span className="text-gray-600">{/* <HiOutlineCalendar /> */}</span>
-            <span className="text-gray-600">Feb 14, 2024</span>
-            <span className="text-gray-800">Task 2</span>
-          </li>
-          {/* Add more recent tasks as needed */}
-        </ul>
-      </div>
-
-      {/* Mini Calendar */}
-      <div>
-        <h2 className="text-2xl font-bold mb-4 text-gray-800">Mini Calendar</h2>
-        {/* Mini calendar component or representation */}
-      </div>
+      {showForm && <TaskForm />}
+      {show && (
+        <>
+          <Task
+            task={{
+              title: "Add logo in jaewoo app",
+              dueDate: "20-03-2024",
+              priority: "high",
+              status: "Completed",
+              assignee: "Karan Sharma",
+              description: "Most important task.",
+            }}
+          />
+          <Task
+            task={{
+              title: "Add Login page in KSW app",
+              dueDate: "24-03-2024",
+              priority: "low",
+              status: "Completed",
+              assignee: "Mohit Sharma",
+              description: "Important task.",
+            }}
+          />
+          <Task
+            task={{
+              title: "Add Customer app",
+              dueDate: "20-03-2024",
+              priority: "high",
+              status: "Completed",
+              assignee: "Karan Sharma",
+              description: "Most important task.",
+            }}
+          />
+        </>
+      )}
     </div>
   );
 };
