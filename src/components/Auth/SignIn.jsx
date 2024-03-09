@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { RotatingLines } from "react-loader-spinner";
+import Loader from "../Common/Loader";
 
 const SignIn = () => {
   const [show, setShow] = useState(false);
@@ -41,16 +41,7 @@ const SignIn = () => {
           >
             {show ? (
               <div className="flex flex-row gap-2 justify-center items-center">
-                <RotatingLines
-                  visible={true}
-                  height="25"
-                  width="25"
-                  strokeWidth="4"
-                  strokeColor="white"
-                  animationDuration="0.75"
-                  ariaLabel="rotating-lines-loading"
-                />
-                Loading...
+                <Loader text={'Loading...'} showText={true} />
               </div>
             ) : (
               "Sign in"
