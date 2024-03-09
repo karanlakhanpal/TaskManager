@@ -30,8 +30,8 @@ const Dashboard = () => {
 
       {/* Quick Actions */}
       <div className="flex gap-4">
-        <button className="bg-white absolute bottom-5 right-5 text-black px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300">
-          Add New Task +
+        <button className="bg-white absolute bottom-5 right-5 p-4 text-md text-black rounded-3xl hover:bg-gray-500 focus:outline-none focus:ring focus:border-blue-300">
+         Add +
         </button>
         <a
           href="/task-list"
