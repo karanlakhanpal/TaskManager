@@ -3,6 +3,7 @@ import image from "../../assets/karan.jpg";
 import ReactModal from "react-modal";
 import Task from "../../Services/Task";
 import TaskForm from "./TaskForm";
+import { MdLogout } from "react-icons/md";
 
 const Dashboard = () => {
   const [show, setShow] = useState(false);
@@ -14,7 +15,7 @@ const Dashboard = () => {
         <div className="flex  items-center">
           <h1 className="text-2xl font-bold">Dashboard</h1>
         </div>
-        <div className="flex flex-row gap-x-3">
+        <div className="flex flex-row gap-x-5">
           <div className="flex  items-center">
             <h1 className="text-xl font-bold">Welcome, {"Karan kumar"}</h1>
           </div>
@@ -27,9 +28,12 @@ const Dashboard = () => {
               className="rounded-full"
             />
           </div>
+          <div className="flex items-center gap-x-2 border border-1 p-2 rounded-md border-black">
+            <MdLogout color="black" size={20} />
+            <p>Logout</p>
+          </div>
         </div>
       </div>
-
       {/* Tabs */}
       <div className="flex p-2">
         <button className="flex-[1] border border-white h-12 text-white hover:bg-white hover:text-black">
@@ -57,7 +61,12 @@ const Dashboard = () => {
         onRequestClose={() => setShow(false)}
         contentLabel="Example Modal"
       >
-        <button className="bg-blue-500 text-white p-3 rounded-2xl" onClick={() => setShow(false)}>Close</button>
+        <button
+          className="bg-blue-500 text-white p-3 rounded-2xl"
+          onClick={() => setShow(false)}
+        >
+          Close
+        </button>
         <TaskForm />
       </ReactModal>
     </div>
