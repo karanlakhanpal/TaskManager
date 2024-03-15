@@ -1,0 +1,15 @@
+{
+  "name": "taskmanager",
+  "version": "1.0.0",
+  "description": "Task manage app",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "karan sharma",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.3"
+  }
+}
