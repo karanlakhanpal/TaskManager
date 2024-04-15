@@ -13,7 +13,7 @@ import SignUp from "./components/Auth/SignUp.jsx";
 import Dashboard from "./components/Task/Dashboard.jsx";
 
 const router = createBrowserRouter(
-  createRoutesFromElements(
+  createRoutesFromElements( 
     <Route path="/" element={<App />}>
       <Route path="/signin" element={<SignIn />} />
       <Route path="/signup" element={<SignUp />} />
