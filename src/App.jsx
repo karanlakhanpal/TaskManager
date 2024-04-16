@@ -1,13 +1,10 @@
-import SignUp from "./components/Auth/SignUp";
-import SignIn from "./components/Auth/SignIn";
+import { Outlet } from "react-router-dom";
 import Dashboard from "./components/Task/Dashboard";
 
 function App() {
   return (
     <div>
-      <Dashboard />
-      {/* <SignUp />
-      <SignIn /> */}
+      <Outlet />
     </div>
   );
 }

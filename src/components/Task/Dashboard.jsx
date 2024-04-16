@@ -23,12 +23,12 @@ const Dashboard = () => {
             <img
               src={image}
               alt="user logo"
-              height={60}
-              width={60}
+              height={50}
+              width={50}
               className="rounded-full"
             />
           </div>
-          <div className="flex items-center gap-x-2 border border-1 p-2 rounded-md border-black">
+          <div className="flex items-center gap-x-2 border border-1 p-2 rounded border-black">
             <MdLogout color="black" size={20} />
             <p>Logout</p>
           </div>
