@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import image from "../../assets/karan.jpg";
-import ReactModal from "react-modal";
+import ReactModal from 'react-modal';
 import Task from "../../Services/Task";
 import TaskForm from "./TaskForm";
 import { MdLogout } from "react-icons/md";
