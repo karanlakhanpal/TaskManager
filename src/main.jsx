@@ -11,6 +11,9 @@ import {
 import SignIn from "./components/Auth/SignIn.jsx";
 import SignUp from "./components/Auth/SignUp.jsx";
 import Dashboard from "./components/Task/Dashboard.jsx";
+import TaskList from "./components/Task/TaskList.jsx";
+import Settings from "./components/Settings.jsx";
+import Profile from "./components/Profile.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -18,6 +21,9 @@ const router = createBrowserRouter(
       <Route path="/signin" element={<SignIn />} />
       <Route path="/signup" element={<SignUp />} />
       <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/tasks" element={<TaskList />} />
+      <Route path="/settings" element={<Settings />} />
+      <Route path="/profile" element={<Profile />} />
     </Route>
   )
 );
